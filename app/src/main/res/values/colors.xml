@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#ADA8A8</color>
+    <color name="base_status_bar">#1B81D3</color>
+<!--    <color name="gray">#E4E4E4</color>-->
+    <color name="commom_background">#f3f3f3</color>
+<!--    <color name="roundbtn_pressed">#6F9BE0</color>-->
+
+    <color name="btn_ripple_base_bg">#1B81D3</color>
+    <color name="spinner_stroke_bg">#138AEB</color>
+
+<!--    <color name="yellow_dark">#FFA000</color>-->
+<!--    <color name="common_dark">#424242</color>-->
+<!--    <color name="common_dark_grey_60">#99616161</color>-->
+<!--    <color name="green">#4CAF50</color>-->
+<!--    <color name="green_light">#C8E6C9</color>-->
+<!--    <color name="common_blue">#2186f3</color>-->
+<!--    <color name="common_dark_grey">#616161</color>-->
+<!--    <color name="common_white">#ffffff</color>-->
+</resources>

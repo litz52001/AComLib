@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HwLoadingView">
+        <!--控件大小-->
+        <attr name="hlv_size" format="dimension" />
+        <!--控件颜色-->
+        <attr name="hlv_color" format="color" />
+        <!--转一圈花费时长-->
+        <attr name="hlv_duration" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableTextView">
+        <attr name="maxCollapsedLines" format="integer"/>
+        <attr name="animDuration" format="integer"/>
+        <attr name="animAlphaStart" format="float"/>
+        <attr name="expandDrawable" format="reference"/>
+        <attr name="collapseDrawable" format="reference"/>
+    </declare-styleable>
+
+    <!--进度条样式-->
+    <declare-styleable name="NumberProgressBar">
+        <attr name="progress_unreached_color" format="color" />
+        <attr name="progress_reached_color" format="color" />
+
+        <attr name="progress_text_size" format="dimension" />
+        <attr name="progress_text_color" format="color" />
+    </declare-styleable>
+
+</resources>

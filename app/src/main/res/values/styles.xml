@@ -1,0 +1,65 @@
+<resources>
+
+    <!-- Base application theme. -->
+<!--    <style name="AppTheme" parent="AppTheme.Base">-->
+<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+
+<!--    </style>-->
+
+<!--    &lt;!&ndash; Base application theme. &ndash;&gt;-->
+<!--    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">-->
+<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+<!--        <item name="colorPrimary">@color/colorPrimary</item>-->
+<!--        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+<!--        <item name="android:windowActionBar">false</item>-->
+<!--        <item name="android:windowActionBarOverlay">true</item>-->
+<!--        <item name="windowNoTitle">true</item>-->
+<!--        <item name="android:windowBackground">@color/background_material_light</item>-->
+
+<!--    </style>-->
+    <style name="ButtonTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorButtonNormal">#FF4081</item><!--正常状态下的颜色  -->
+        <item name="colorControlHighlight">#9F4E4848</item><!--覆盖色，按下的颜色  -->
+    </style>
+
+    <style name="cusSpinner">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/shap_spinner_bg</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="basedialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!--是否去除边框-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item>
+        <!--半透明-->
+        <item name="android:windowNoTitle">true</item>
+        <!--无标题-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--背景透明-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--模糊-->
+    </style>
+
+    <style name="UpdateDialog" parent="basedialog">
+        <item name="android:windowEnterAnimation">@anim/update_app_window_in</item>  <!--显示动画-->
+        <item name="android:windowExitAnimation">@anim/update_app_window_out</item> <!--消失动画-->
+    </style>
+
+    <!--adialog-->
+    <style name="adialog_alpha" parent="basedialog">
+        <item name="android:windowEnterAnimation">@anim/adialog_alpha_show</item>  <!--显示动画-->
+        <item name="android:windowExitAnimation">@anim/adialog_alpha_cancel</item> <!--消失动画-->
+    </style>
+
+    <style name="adialog_translate" parent="basedialog">
+        <item name="android:windowEnterAnimation">@anim/adialog_translate_show</item>  <!--显示动画-->
+        <item name="android:windowExitAnimation">@anim/adialog_translate_cancel</item> <!--消失动画-->
+    </style>
+
+
+
+</resources>

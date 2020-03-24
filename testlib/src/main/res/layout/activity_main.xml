@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/kongbaiBtn"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="空白数据"
+            android:textColor="#DDFFFFFF"
+            android:background="@drawable/btn_ripple_base_bg"
+            />
+
+        <Button
+            android:id="@+id/netBtn"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="网络异常"
+            android:textColor="#DDFFFFFF"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_ripple_base_bg"
+            />
+
+        <Button
+            android:id="@+id/falseBtn"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="数据错误"
+            android:layout_marginLeft="10dp"
+            android:textColor="#DDFFFFFF"
+            android:background="@drawable/btn_ripple_base_bg"
+            />
+
+        <Button
+            android:id="@+id/normalBtn"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="正常显示"
+            android:textColor="#DDFFFFFF"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_ripple_base_bg"
+            />
+
+        <Button
+            android:id="@+id/loadBtn"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="加载中"
+            android:textColor="#DDFFFFFF"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_ripple_base_bg"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+    <Button
+        android:id="@+id/logBtn"
+        android:layout_width="200dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:text="打印日志"
+        android:background="@drawable/btn_ripple_base_bg"
+         />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="普通"
+        android:layout_marginTop="10dp"
+        android:textColor="#DDFFFFFF"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_ripple_base_bg"
+         />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="小的"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_ripple_selector_base"
+        android:layout_marginTop="10dp"
+        android:textColor="#DDFFFFFF"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:text="透明的背景"
+        android:background="@drawable/btn_ripple_base_bg"
+        />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:text="透明的背景"
+        android:background="@drawable/btn_ripple_base_bg"
+        />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:text="View"
+        android:background="@drawable/view_ripple_base_bg"
+        />
+
+    <com.acommonlibrary.widget.CustomSpinner
+        android:id="@+id/spinner"
+        style="@style/cusSpinner"
+        android:layout_width="200dp"
+        android:layout_gravity="center"
+        android:layout_height="40dp" />
+    <Button
+        android:id="@+id/updateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="版本更新"
+        android:layout_marginTop="10dp"
+        android:textColor="#DDFFFFFF"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_ripple_base_bg"
+        />
+
+    </LinearLayout>
+</LinearLayout>

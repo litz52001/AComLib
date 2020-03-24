@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#79B0B1B1"><!--水波纹的颜-->
+    
+    <!--显示默认的 drawable，纯颜色效果最好-->
+    <item android:drawable="@color/white" />
+
+</ripple>
+

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TestLib</string>
+
+    <string name="dialog_msg">1.支持Android M N O P Q\n2.支持自定义下载过程\n3.支持 设备>=Android M 动态权限的申请\n4.支持通知栏进度条展示\n5.支持文字国际化</string>
+
+    <string name="emptyview_none_data">暂无数据</string>
+    <string name="emptyview_net_error">网络异常，请点击空白处刷新</string>
+    <string name="emptyview_error">请求失败，请点击空白处刷新</string>
+
+
+
+</resources>

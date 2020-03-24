@@ -1,0 +1,2 @@
+include ':app', ':utilsa', ':testlib'
+rootProject.name='ACommonLibrary'
