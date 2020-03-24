@@ -1,2 +1,2 @@
 include ':app', ':utilsa', ':testlib'
-rootProject.name='ACommonLibrary'
+rootProject.name='AComLib'
