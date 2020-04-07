@@ -29,19 +29,36 @@
         <item name="android:layout_height">match_parent</item>
     </style>
 
+<!--    <style name="basedialog" parent="@android:style/Theme.Dialog">-->
+<!--&lt;!&ndash;        <item name="android:windowFrame">@null</item>&ndash;&gt;-->
+<!--        &lt;!&ndash;是否去除边框&ndash;&gt;-->
+<!--&lt;!&ndash;        <item name="android:windowIsFloating">true</item>&ndash;&gt;-->
+<!--        &lt;!&ndash;是否浮现在activity之上&ndash;&gt;-->
+<!--&lt;!&ndash;        <item name="android:windowIsTranslucent">false</item>&ndash;&gt;-->
+<!--        &lt;!&ndash;半透明&ndash;&gt;-->
+<!--&lt;!&ndash;        <item name="android:windowNoTitle">true</item>&ndash;&gt;-->
+<!--        &lt;!&ndash;无标题&ndash;&gt;-->
+<!--&lt;!&ndash;        <item name="android:windowBackground">@android:color/transparent</item>&ndash;&gt;-->
+<!--        &lt;!&ndash;背景透明&ndash;&gt;-->
+<!--        <item name="android:backgroundDimEnabled">true</item>-->
+<!--        &lt;!&ndash;模糊&ndash;&gt;-->
+<!--    </style>-->
     <style name="basedialog" parent="@android:style/Theme.Dialog">
+        <!-- 边框 -->
         <item name="android:windowFrame">@null</item>
-        <!--是否去除边框-->
+        <!-- 是否浮现在activity之上 -->
         <item name="android:windowIsFloating">true</item>
-        <!--是否浮现在activity之上-->
-        <item name="android:windowIsTranslucent">false</item>
-        <!--半透明-->
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 无标题 -->
         <item name="android:windowNoTitle">true</item>
-        <!--无标题-->
+        <item name="android:background">@android:color/transparent</item>
+        <!-- 背景透明 -->
         <item name="android:windowBackground">@android:color/transparent</item>
-        <!--背景透明-->
+        <!-- 模糊 -->
         <item name="android:backgroundDimEnabled">true</item>
-        <!--模糊-->
+        <!-- 遮罩层 -->
+        <item name="android:backgroundDimAmount">0.5</item>
     </style>
 
     <style name="UpdateDialog" parent="basedialog">
@@ -49,17 +66,17 @@
         <item name="android:windowExitAnimation">@anim/update_app_window_out</item> <!--消失动画-->
     </style>
 
-    <!--adialog-->
+    <!--adialog 渐变-->
     <style name="adialog_alpha" parent="basedialog">
         <item name="android:windowEnterAnimation">@anim/adialog_alpha_show</item>  <!--显示动画-->
         <item name="android:windowExitAnimation">@anim/adialog_alpha_cancel</item> <!--消失动画-->
     </style>
 
+    <!--底部滑出-->
     <style name="adialog_translate" parent="basedialog">
         <item name="android:windowEnterAnimation">@anim/adialog_translate_show</item>  <!--显示动画-->
         <item name="android:windowExitAnimation">@anim/adialog_translate_cancel</item> <!--消失动画-->
     </style>
-
 
 
 </resources>

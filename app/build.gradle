@@ -60,6 +60,10 @@ dependencies {
     // Optional, if you use support library fragments:
     debugApi 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.3'
 
+    //butterknife
+    api 'com.jakewharton:butterknife:10.2.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+    
     //去除重复到导包
 //    all*.exclude group: 'com.google.code.gson'
 

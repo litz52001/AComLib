@@ -2,6 +2,7 @@ package com.acommonlibrary;
 
 import android.app.Application;
 import android.content.Context;
+import android.graphics.Typeface;
 
 import com.acommonlibrary.util.ProcessUtils;
 import com.squareup.leakcanary.LeakCanary;
@@ -11,6 +12,8 @@ import com.tencent.bugly.crashreport.CrashReport;
 public abstract class BaseApp extends Application {
     private static Context mContext;
     private RefWatcher mRefWatcher;
+    public static Typeface iconfont;
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -27,17 +30,28 @@ public abstract class BaseApp extends Application {
         // 初始化Bugly
         CrashReport.initCrashReport(context, setBuglyAPPID(), setBuglyStatus(), strategy);
 
-
-        if (LeakCanary.isInAnalyzerProcess(this)) {
-            // This process is dedicated to LeakCanary for heap analysis.
-            // You should not init your app in this process.
-            return;
+        if(setLeakCanaryStatus()){
+            if (LeakCanary.isInAnalyzerProcess(this)) {
+                // This process is dedicated to LeakCanary for heap analysis.
+                // You should not init your app in this process.
+                return;
+            }
+            mRefWatcher = LeakCanary.install(this);
         }
-        mRefWatcher = LeakCanary.install(this);
+
     }
 
     public static Context getAppContext() {
         return mContext;
+    }
+
+    public static Typeface getIconfont(Context context) {
+        if (iconfont != null) {
+            return iconfont;
+        } else {
+            iconfont = Typeface.createFromAsset(context.getAssets(), "iconfont/iconfont.ttf");
+        }
+        return iconfont;
     }
 
     /**
@@ -51,6 +65,11 @@ public abstract class BaseApp extends Application {
     public abstract boolean setBuglyStatus();
 
     /**
+     * 是否监控内存泄漏
+     * @return
+     */
+    public abstract boolean setLeakCanaryStatus();
+    /**
      *  Fragment he activity 的 onDestroy ()使用
      *
      * RefWatcher refWatcher = ExampleApplication.getRefWatcher(getActivity());
@@ -62,4 +81,5 @@ public abstract class BaseApp extends Application {
         BaseApp application = (BaseApp) context.getApplicationContext();
         return application.mRefWatcher;
     }
+
 }

@@ -26,8 +26,19 @@ import com.acommonlibrary.util.DensityUtils;
 import com.acommonlibrary.util.ScreenUtils;
 import com.acommonlibrary.R;
 
+import butterknife.ButterKnife;
+
 /**
+ * 基础弹出框
+ * 底部弹出框
+ * ADialog dialog = new ADialog(SettingPermissActivity.this,R.layout.dialog_setbackstage,true);
+ * dialog.setAnimationsStyle(R.style.adialog_translate);
+ * dialog.setGravity(Gravity.BOTTOM);
+ * dialog.show();
  *
+ * public void initView(){
+ *   ButterKnife.bind(this);
+ * }
  */
 public class ADialog extends Dialog{
 
@@ -38,45 +49,60 @@ public class ADialog extends Dialog{
     private int height = 0;
     private int bgRadius = 0; //背景圆角
     private int bgColor = Color.WHITE; //背景颜色
+    private boolean isMatchParent;
 
     public ADialog(@NonNull Context context) {
         this(context, R.layout.dialog_adialog_confirm);
     }
 
     public ADialog(@NonNull Context context, int layoutId) {
-        this(context, layoutId, R.style.basedialog);
+        this(context, layoutId, false);
     }
 
-    public ADialog(@NonNull Context context, int layoutId, int themeResId) {
-        super(context, themeResId);
+    public ADialog(@NonNull Context context, int layoutId, boolean isMatchParent) {
+        super(context,R.style.basedialog);
         this.context = context;
         this.layoutId = layoutId;
+        this.isMatchParent = isMatchParent;
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(layoutId);
+        ButterKnife.bind(this);
         init();
+        initView();
     }
+
+    /**
+     * 重写加载自定义需求
+     */
+    public void initView(){}
 
     private void init() {
         setCanceledOnTouchOutside(true);
-        getWindow().setBackgroundDrawable(getRoundRectDrawable(DensityUtils.dp2px(5), Color.WHITE));
+        getWindow().setBackgroundDrawable(getRoundRectDrawable(DensityUtils.dp2px(5), Color.TRANSPARENT));//getRoundRectDrawable(DensityUtils.dp2px(5), Color.WHITE)
 
-        width = (int)(ScreenUtils.getScreenWidth()*0.8);
+        if(isMatchParent){
+            width = WindowManager.LayoutParams.MATCH_PARENT;
+        }else{
+            width = (int)(ScreenUtils.getScreenWidth()*0.8);
+
+        }
         height = WindowManager.LayoutParams.WRAP_CONTENT;
         setWidthHeight();
-        getWindow().setWindowAnimations(R.style.adialog_alpha);
-//        getWindow().setWindowAnimations(R.style.dialog_translate);
     }
 
-    public ADialog with(){
-        show();
-        dismiss();
+    /**
+     * 设置点击外部消失 默认消失
+     * @param isTouchOutside
+     * @return
+     */
+    public ADialog setTouchOutside(boolean isTouchOutside){
+        setCanceledOnTouchOutside(isTouchOutside);
         return this;
     }
-
     //    >>>>>>>>>>>>>>>>>>>>>>>>>>>>设置动画>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     public ADialog setAnimationsStyle(int style){
         getWindow().setWindowAnimations(style);
@@ -237,7 +263,7 @@ public class ADialog extends Dialog{
     public <T extends View> T getView(@IdRes int viewId) {
         View view = views.get(viewId);
         if (view == null) {
-            view = findViewById(viewId);
+            view = this.findViewById(viewId);
             views.put(viewId, view);
         }
         return (T) view;
@@ -388,6 +414,7 @@ public class ADialog extends Dialog{
         drawable.setColor(color!=0 ? color : Color.TRANSPARENT);
         return drawable;
     }
+
 //    public static GradientDrawable getRoundRectDrawable(int radius, int color, boolean isFill, int strokeWidth){
 //        //左上、右上、右下、左下的圆角半径
 //        float[] radiuss = {radius, radius, radius, radius, radius, radius, radius, radius};

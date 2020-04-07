@@ -273,6 +273,9 @@ public class CustomSpinner extends LinearLayout {
         } else if (EmptyUtils.isNotEmpty(listStr)) {
             tv_name.setText(listStr.get(index));
         }
+        postion = index;
+        if(mAdapter != null)
+            mAdapter.notifyDataSetChanged();
         if(EmptyUtils.isNotEmpty(onItemSelectedListener))
             onItemSelectedListener.onItemSelected(null, null, index);
     }

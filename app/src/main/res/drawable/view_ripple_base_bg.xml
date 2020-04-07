@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--    android:background="@drawable/view_ripple_base_bg"-->
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
     android:color="#79B0B1B1"><!--水波纹的颜-->
     

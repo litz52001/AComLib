@@ -10,18 +10,21 @@ apply plugin: 'com.android.library'
 并把applicationId注释掉
 //applicationId "com.acommonlibrary"
 
-方法一：
+方法一：能引用修改不能同时
 以module地址（../xx/xx/app）的形式正常导入Import Module作为引用即可，以module形式存在，在主项目下方
 
-方法二：
+方法二：修改同时更新
 在主项目下的settings.gradle文件添加
 include ':BaseLibrary'
 project(':BaseLibrary').projectDir = new File('../BaseLibrary')
 include ':BaseLibrary:base' base为module名
 
 主项目build.fradle添加引用
-implementation project(':BaseLibrary:base')
-
+implementation project(path: ':BaseLibrary:base')
+与主项目目录同级显示
+compile(project(':qianwanli')) {
+    exclude group: 'com.squareup.okhttp'
+}
 注意：
 1、主项目虽然引用了BaseLibrary:base，但是却不能使用其所包含的第三方jar
     解决方法：
@@ -29,6 +32,10 @@ implementation project(':BaseLibrary:base')
             将implementation改为api
             将testImplementation改为testApi
             将androidTestImplementation改为androidTestApi
+            普通的jar包依赖冲突:
+            compile(project(':qianwanli')) {
+                exclude group: 'com.squareup.okhttp'
+            }
 2、当BaseLibrary项目中又增加了一个module命名为t_module，这个t_module引用了base之后，
     Test项目引用了t_module报错：
         Project with path ':base' could not be found in project ':BaseLibrary;t_module'
@@ -38,8 +45,9 @@ implementation project(':BaseLibrary:base')
         改为
             implementation project(project.path.replace(project.name,'') +':base')
 
-
-
+app更新库
+https://github.com/azhon/AppUpdate
+https://github.com/WVector/AppUpdate
 
 
 
