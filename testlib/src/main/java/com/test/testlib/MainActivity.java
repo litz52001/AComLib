@@ -8,11 +8,11 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.acommonlibrary.util.MLog;
-import com.acommonlibrary.widget.CustomSpinner;
-import com.acommonlibrary.widget.DateSelectViewUtil;
-import com.acommonlibrary.widget.TipUtils;
-import com.acommonlibrary.widget.bean.CustomItem;
+import com.acomlib.util.MLog;
+import com.acomlib.widget.CustomSpinner;
+import com.acomlib.widget.DateSelectViewUtil;
+import com.acomlib.widget.TipUtils;
+import com.acomlib.widget.bean.CustomItem;
 import com.azhon.appupdate.config.UpdateConfiguration;
 import com.azhon.appupdate.manager.DownloadManager;
 import com.squareup.leakcanary.RefWatcher;

@@ -4,7 +4,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
-//        applicationId "com.acommonlibrary"
+//        applicationId "com.acomlib"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
@@ -41,10 +41,11 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation 'com.google.android.material:material:1.0.0'
+    api 'com.google.android.material:material:1.0.0'
+
 //    api 'org.jsoup:jsoup:1.12.2'
 
-    api 'com.google.code.gson:gson:2.8.5'
+    api 'com.google.code.gson:gson:2.8.6'
     api 'org.jetbrains:annotations:15.0'
 
     //Bugly
@@ -62,7 +63,8 @@ dependencies {
 
     //butterknife
     api 'com.jakewharton:butterknife:10.2.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+    //注解无法引用
+//    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
     
     //去除重复到导包
 //    all*.exclude group: 'com.google.code.gson'

@@ -8,7 +8,7 @@
     android:gravity="center"
     >
 
-    <com.acommonlibrary.widget.IOSLoadingView
+    <com.acomlib.widget.IOSLoadingView
         android:layout_width="45dp"
         android:layout_height="45dp" />
 

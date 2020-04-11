@@ -1,2 +1,3 @@
-include ':app', ':utilsa', ':testlib'
-rootProject.name='AComLib'
+//rootProject.name='AComLib'
+include  ':utilsa', ':testlib',':app'
+

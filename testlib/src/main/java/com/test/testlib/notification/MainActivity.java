@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.acommonlibrary.widget.NotificationUtils;
+import com.acomlib.widget.NotificationUtils;
 import com.test.testlib.MyApp;
 import com.test.testlib.R;
 

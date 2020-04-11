@@ -2,7 +2,7 @@ package com.test.testlib;
 
 import android.content.Context;
 
-import com.acommonlibrary.BaseApp;
+import com.acomlib.BaseApp;
 
 
 

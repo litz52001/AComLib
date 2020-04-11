@@ -1,29 +1,16 @@
 package com.test.testlib.filedown;
 
-import android.Manifest;
 import android.content.Context;
-import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
-import com.acommonlibrary.util.FileUtils;
-import com.acommonlibrary.widget.TipUtils;
 import com.test.testlib.R;
-
-import java.io.File;
-import java.lang.ref.WeakReference;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class SecondDownLoadActivity extends AppCompatActivity {
 

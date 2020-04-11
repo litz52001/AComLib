@@ -134,7 +134,7 @@
         android:background="@drawable/view_ripple_base_bg"
         />
 
-    <com.acommonlibrary.widget.CustomSpinner
+    <com.acomlib.widget.CustomSpinner
         android:id="@+id/spinner"
         style="@style/cusSpinner"
         android:layout_width="200dp"
