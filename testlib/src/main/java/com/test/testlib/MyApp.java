@@ -33,7 +33,10 @@ public class MyApp extends BaseApp {
         return true;
     }
 
-
+    @Override
+    public boolean setLeakCanaryStatus() {
+        return false;
+    }
 
 
 }

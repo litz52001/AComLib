@@ -1,16 +1,21 @@
-package com.test.testlib.emptyview;
+package com.acomlib.widget.emptyview;
 
+import android.app.Activity;
 import android.content.Context;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.test.testlib.R;
+import com.acomlib.R;
 
 /**
- * 空页面控制器
+ * 空页面控制器  layoutid
  * emptyView = new EmptyViewController(this, findViewById(R.id.content));
+ * showEmptyView()
+ * showNetErrorView()
+ * emptyView.setRefreshClick(this);
+ * emptyView.restoreView();恢复原视图
  */
 public class EmptyViewController {
     private Context mContext;
@@ -18,7 +23,7 @@ public class EmptyViewController {
     /**
      * @param targetView 需要展示需要替换为empty界面的同级布局(比如listview)
      */
-    public EmptyViewController(Context context, View targetView) {
+    public EmptyViewController(Activity context,View targetView) {
         if (targetView == null) {
             throw new IllegalArgumentException("You must return a right target view for empty view");
         }
@@ -47,7 +52,7 @@ public class EmptyViewController {
      */
     public void showNetFalseView(String falseMsg) {
         setRefreshClick(null);
-        showEmptyView(falseMsg,R.mipmap.emptyview_error);
+        showEmptyView(falseMsg, R.mipmap.emptyview_error);
     }
 
     /**
@@ -84,7 +89,7 @@ public class EmptyViewController {
      * 返回默认空数据layout
      */
     private View getDefaultEmptyView() {
-        DefaultEmptyView emptyDefaultView = (DefaultEmptyView) LayoutInflater.from(mContext).inflate(R.layout.common_view_empty, null);
+        DefaultEmptyView emptyDefaultView = (DefaultEmptyView) LayoutInflater.from(mContext).inflate(R.layout.com_emptyview, null);
         emptyDefaultView.setEmptyText(R.string.emptyview_none_data);
         return emptyDefaultView;
     }

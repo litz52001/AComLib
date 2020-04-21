@@ -65,7 +65,8 @@ dependencies {
     api 'com.jakewharton:butterknife:10.2.0'
     //注解无法引用
 //    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
-    
+    //沉浸通知栏
+//    implementation 'com.jaeger.statusbarutil:library:1.5.1'
     //去除重复到导包
 //    all*.exclude group: 'com.google.code.gson'
 

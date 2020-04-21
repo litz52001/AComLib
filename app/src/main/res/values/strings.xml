@@ -18,5 +18,9 @@
     <string name="dialog_new_size">新版本大小：%sM</string>
     <string name="update">升级</string>
 
+    <!--EmptyView-->
+    <string name="emptyview_none_data">暂无数据</string>
+    <string name="emptyview_net_error">网络异常，请点击空白处刷新</string>
+    <string name="emptyview_error">请求失败，请点击空白处刷新</string>
 
 </resources>

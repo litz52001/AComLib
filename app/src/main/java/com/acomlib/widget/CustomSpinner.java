@@ -152,12 +152,12 @@ public class CustomSpinner extends LinearLayout {
                             }
                         });
                         ib.setImageResource(R.mipmap.arrow_down_float);
-                        pop.showAsDropDown(view, 0, 0);
+                        pop.showAsDropDown(view, 0, 13);
                         isPopShow = false;
                     } else {
                         if (isPopShow) {
                             ib.setImageResource(R.mipmap.arrow_up_float); //向上的箭头
-                            pop.showAsDropDown(view, 0, 0);
+                            pop.showAsDropDown(view, 0, 13);
                             isPopShow = false;
                         } else {
                             ib.setImageResource(R.mipmap.arrow_down_float); //向下的箭头

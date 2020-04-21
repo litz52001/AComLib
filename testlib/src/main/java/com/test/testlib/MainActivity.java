@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity implements EmptyViewControll
                 emptyView.showNetFalseView("错误数据异常");
                 break;
             case R.id.normalBtn:
-                emptyView.restoreView();
+
                 break;
             case R.id.loadBtn:
 //                emptyView.showEmptyView();
