@@ -1,26 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+
+    <color name="colorPrimary">#1B81D3</color>
+    <color name="colorPrimaryDark">#1B81D3</color>
+    <color name="colorAccent">#1B81D3</color>
 
     <color name="transparent">#00000000</color>
     <color name="white">#ffffff</color>
-    <color name="black">#ADA8A8</color>
-    <color name="base_status_bar">#1B81D3</color>
-<!--    <color name="gray">#E4E4E4</color>-->
+    <color name="line_gray">#20000000</color>
+    <color name="base_frame_bar">#1B81D3</color>
+
+    <color name="click_bg_gray">#79B0B1B1</color>
+    <color name="title_bar_bg">#1B81D3</color>
+    <color name="black">#000000</color>
+    <color name="driver_line">#ededed</color>
+    <color name="bg_gray">#e8eaec</color>
+    <color name="item_selected_bg">#69BFFF</color>
+    <color name="txt_normal">#00000000</color>
+    <color name="txt_selected">#00000000</color>
     <color name="commom_background">#f3f3f3</color>
-<!--    <color name="roundbtn_pressed">#6F9BE0</color>-->
 
-    <color name="btn_ripple_base_bg">#1B81D3</color>
-    <color name="spinner_stroke_bg">#138AEB</color>
+    <color name="home_red">#fb5050</color>
+    <color name="color_33">#333333</color>
+    <color name="color_919695">#919695</color>
+    <color name="color_525454">#525454</color>
 
-<!--    <color name="yellow_dark">#FFA000</color>-->
-<!--    <color name="common_dark">#424242</color>-->
-<!--    <color name="common_dark_grey_60">#99616161</color>-->
-<!--    <color name="green">#4CAF50</color>-->
-<!--    <color name="green_light">#C8E6C9</color>-->
-<!--    <color name="common_blue">#2186f3</color>-->
-<!--    <color name="common_dark_grey">#616161</color>-->
-<!--    <color name="common_white">#ffffff</color>-->
+    <color name="btn_ripple_base_bg">#20000000</color>
+    <color name="spinner_stroke_bg">#1B81D3</color>
+    <color name="base_status_bar">#1B81D3</color>
+
 </resources>

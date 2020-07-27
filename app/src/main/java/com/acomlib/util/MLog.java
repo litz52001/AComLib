@@ -11,7 +11,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 /**
  * 模仿logger，创建自己的日志操作类
@@ -141,7 +143,7 @@ public class MLog {
      * @param tagStr
      * @param obj
      */
-    public static void llog(int type, String tagStr, Object obj) {
+    private static void llog(int type, String tagStr, Object obj) {
         String msg;
         if (!isPrintLog) {
             return;
@@ -228,6 +230,32 @@ public class MLog {
                 }
             }
         }).start();
+    }
+
+    /**
+     * 输出json格式数据
+     * 支持 String 、List 、Map 、Object
+     * @param
+     */
+    public static void json(Object obj) {
+        String msg = "";
+        if (obj == null) {
+            msg = "Log with null Object";
+        }else if(obj instanceof String){
+            if(JsonUtils.isJson(obj.toString())){
+                msg = obj.toString();
+            }else{
+                msg = "parameters is not json String : "+obj.toString();
+            }
+        }else if (obj.getClass().isArray()){
+            msg = JsonUtils.list2json((List<?>) obj);
+        }else if(obj instanceof Map){
+            msg = JsonUtils.map2json((Map) obj);
+        }else{
+            msg = JsonUtils.toJson(obj);
+        }
+        String jsonStr = JsonFormatTool.formatJson(msg);
+        llog(E, null, jsonStr);
     }
 
 }

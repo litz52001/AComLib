@@ -196,6 +196,16 @@ public class CustomSpinner extends LinearLayout {
             this.listStr = itemList;
             tv_name.setText((String) itemList.get(0));
         }
+    }
+
+    /**
+     * 重新填充数据后刷新
+     */
+    public void notifyDataSetChanged(){
+        if(mAdapter!= null)
+            mAdapter.notifyDataSetChanged();
+        if(onCusAdapter!= null)
+            onCusAdapter.getAdapter().notifyDataSetChanged();
 
     }
 
@@ -342,7 +352,7 @@ public class CustomSpinner extends LinearLayout {
 
             if (position == CustomSpinner.this.postion) {
                 //选中条目的背景色
-                view.setBackgroundColor(getResources().getColor(R.color.base_status_bar));
+                view.setBackgroundColor(getResources().getColor(R.color.base_frame_bar));
                 item_name.setTextColor(getResources().getColor(R.color.white));
             }
 

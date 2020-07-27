@@ -63,6 +63,16 @@ public class KeyboardUtils {
         imm.hideSoftInputFromWindow(mEditText.getWindowToken(), 0);
     }
 
+    public static void closeKeybord(EditText... mEditText)
+    {
+        for (int i = 0; i < mEditText.length; i++) {
+            InputMethodManager imm = (InputMethodManager) BaseApp.getAppContext()
+                    .getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(mEditText[i].getWindowToken(), 0);
+        }
+
+    }
+
     /**
      * 切换软键盘的状态
      * 如当前为收起变为弹出,若当前为弹出变为收起

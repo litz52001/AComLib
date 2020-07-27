@@ -22,6 +22,8 @@ import java.util.Set;
 
 public class JsonUtils {
 
+
+
     /**
      * 对象转json
      * @param obj
@@ -30,6 +32,18 @@ public class JsonUtils {
     public static String toJson(Object obj) {
         Gson gson = new Gson();
         return gson.toJson(obj);
+    }
+
+    /**
+     * 判断是否是json结构
+     */
+    public static boolean isJson(String value) {
+        try {
+            new JSONObject(value);
+        } catch (JSONException e) {
+            return false;
+        }
+        return true;
     }
 
     /**
@@ -43,6 +57,7 @@ public class JsonUtils {
         Gson gson = new Gson();
         return gson.fromJson(str, type);
     }
+
 
     /**
      * Map转为JSONObject

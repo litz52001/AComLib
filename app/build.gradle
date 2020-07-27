@@ -2,10 +2,10 @@
 apply plugin: 'com.android.library'
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+//    buildToolsVersion "29.0.2"
     defaultConfig {
 //        applicationId "com.acomlib"
-        minSdkVersion 21
+        minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -21,8 +21,13 @@ android {
     }
     buildTypes {
         release {
+            buildConfigField "boolean", "isDebug", "false"
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug{
+            minifyEnabled false
+            buildConfigField "boolean", "isDebug", "true"
         }
     }
 

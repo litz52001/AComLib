@@ -25,6 +25,18 @@ public class IntentUtils {
     }
 
     /**
+     * 跳转浏览器
+     * @param
+     * @return
+     */
+    public static Intent getUrlIntent(String url) {
+        Intent intent = new Intent();
+        intent.setAction("android.intent.action.VIEW");
+        Uri content_url = Uri.parse("http://" + url);
+       return intent.setData(content_url);
+    }
+
+    /**
      * 获取安装App（支持6.0）的意图
      *
      * @param filePath 文件路径

@@ -20,6 +20,13 @@ import com.acomlib.R;
 public class EmptyViewController {
     private Context mContext;
     private CommonEmptyHelper mHelper;
+
+    public static final String NET_WORK_STATE = "1";
+    public static final String ERROR_STATE = "2";
+    public static final String LOADING_STATE = "3";
+    public static final String SUCCESS_STATE = "4";
+    public static final String NOT_DATA_STATE = "5";
+
     /**
      * @param targetView 需要展示需要替换为empty界面的同级布局(比如listview)
      */
@@ -31,6 +38,25 @@ public class EmptyViewController {
         this.mHelper = new CommonEmptyHelper(targetView);
     }
 
+    public void showStatus(String state,String msg){
+        if (!TextUtils.isEmpty(state)) {
+            if (ERROR_STATE.equals(state)) {
+                showNetFalseView(msg);
+            } else if (NET_WORK_STATE.equals(state)) {
+                showNetErrorView();
+            } else if (LOADING_STATE.equals(state)) {
+                showLoading();
+            } else if (SUCCESS_STATE.equals(state)) {
+                restoreView();
+            } else if (NOT_DATA_STATE.equals(state)) {
+                showEmptyView();
+            }
+        }
+    }
+
+    protected void showLoading(){
+        showLayout(View.inflate(mContext, R.layout.com_loading_view,null));
+    }
     /**
      * 暂无数据
      */

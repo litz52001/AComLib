@@ -9,6 +9,8 @@ import android.util.SparseLongArray;
 import java.lang.reflect.Array;
 import java.util.Collection;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  *   判空相关工具类
@@ -17,6 +19,22 @@ public class TextUtils {
 
     private TextUtils() {
         throw new UnsupportedOperationException("u can't instantiate me...");
+    }
+
+    /**
+     * 解决编码问题，去掉换行
+     * 方法名称:replaceBlank
+     * 方法描述:
+     * @return 返回值描述
+     */
+    public static String replaceBlank(String str) {
+        String dest = "";
+        if (str != null) {
+            Pattern p = Pattern.compile("\t|\r|\n");
+            Matcher m = p.matcher(str);
+            dest = m.replaceAll("");
+        }
+        return dest;
     }
 
     /**

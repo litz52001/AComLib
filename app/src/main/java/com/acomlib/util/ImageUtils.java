@@ -53,6 +53,17 @@ public class ImageUtils {
     }
 
     /**
+     * dip转pix
+     * @param context
+     * @param dp
+     * @return
+     */
+    public static int dp2px(Context context, float dp) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (dp * scale + 0.5f);
+    }
+
+    /**
      * bitmap转byteArr
      *
      * @param bitmap bitmap对象
@@ -156,6 +167,10 @@ public class ImageUtils {
             inSampleSize <<= 1;
         }
         return inSampleSize;
+    }
+
+    public static Bitmap getPathToBitmap(String path){
+        return BitmapFactory.decodeFile(path);
     }
 
     /**

@@ -14,7 +14,10 @@ import com.acomlib.appupdate.service.DownloadService;
 import com.acomlib.util.AppUtils;
 import com.acomlib.util.MLog;
 
-
+/**
+ * https://github.com/azhon/AppUpdate
+ *
+ */
 public class DownloadManager {
 
     private static final String TAG = Constant.TAG + "DownloadManager";

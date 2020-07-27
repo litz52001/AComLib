@@ -21,9 +21,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 描述:     TODO 库中默认的下载管理
- * @author 阿钟
  */
-
 
 public class HttpDownloadManager extends BaseHttpDownloadManager {
 

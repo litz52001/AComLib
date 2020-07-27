@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
-    android:color="#BD454A4E"><!--点击水波纹的颜色 -->
+    xmlns:tools="http://schemas.android.com/tools"
+    android:color="#BD454A4E"
+    tools:targetApi="lollipop"><!--点击水波纹的颜色 -->
     <!--显示默认的 drawable，纯颜色效果最好-->
 <!--    <item android:drawable="@color/base_status_bar" />-->
     <!--显示默认的 drawable，二选一 -->
@@ -11,12 +13,12 @@
         </shape>
     </item>
 
-    <!--匹配默认值的波纹效果剪切遮罩
-        有边界的水波纹
+    <!--匹配默认值的波纹效果剪切遮罩 有边界的水波纹
         shape使用圆角 mask 也必须使用圆角
         -->
     <item
         android:id="@android:id/mask"
-        android:drawable="@drawable/btn_ripple_base_round_corners" />
+        android:drawable="@drawable/btn_ripple_base_round_corners"
+        tools:targetApi="lollipop" />
 </ripple>
 

@@ -1,22 +1,16 @@
 <resources>
 
     <!-- Base application theme. -->
-<!--    <style name="AppTheme" parent="AppTheme.Base">-->
-<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar" >
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <!--        <item name="android:windowBackground">@android:color/transparent</item>-->
+    </style>
 
-<!--    </style>-->
-
-<!--    &lt;!&ndash; Base application theme. &ndash;&gt;-->
-<!--    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">-->
-<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
-<!--        <item name="colorPrimary">@color/colorPrimary</item>-->
-<!--        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
-<!--        <item name="android:windowActionBar">false</item>-->
-<!--        <item name="android:windowActionBarOverlay">true</item>-->
-<!--        <item name="windowNoTitle">true</item>-->
-<!--        <item name="android:windowBackground">@color/background_material_light</item>-->
-
-<!--    </style>-->
     <style name="ButtonTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
         <item name="colorButtonNormal">#FF4081</item><!--正常状态下的颜色  -->
         <item name="colorControlHighlight">#9F4E4848</item><!--覆盖色，按下的颜色  -->
@@ -29,20 +23,6 @@
         <item name="android:layout_height">match_parent</item>
     </style>
 
-<!--    <style name="basedialog" parent="@android:style/Theme.Dialog">-->
-<!--&lt;!&ndash;        <item name="android:windowFrame">@null</item>&ndash;&gt;-->
-<!--        &lt;!&ndash;是否去除边框&ndash;&gt;-->
-<!--&lt;!&ndash;        <item name="android:windowIsFloating">true</item>&ndash;&gt;-->
-<!--        &lt;!&ndash;是否浮现在activity之上&ndash;&gt;-->
-<!--&lt;!&ndash;        <item name="android:windowIsTranslucent">false</item>&ndash;&gt;-->
-<!--        &lt;!&ndash;半透明&ndash;&gt;-->
-<!--&lt;!&ndash;        <item name="android:windowNoTitle">true</item>&ndash;&gt;-->
-<!--        &lt;!&ndash;无标题&ndash;&gt;-->
-<!--&lt;!&ndash;        <item name="android:windowBackground">@android:color/transparent</item>&ndash;&gt;-->
-<!--        &lt;!&ndash;背景透明&ndash;&gt;-->
-<!--        <item name="android:backgroundDimEnabled">true</item>-->
-<!--        &lt;!&ndash;模糊&ndash;&gt;-->
-<!--    </style>-->
     <style name="basedialog" parent="@android:style/Theme.Dialog">
         <!-- 边框 -->
         <item name="android:windowFrame">@null</item>
@@ -73,9 +53,54 @@
     </style>
 
     <!--底部滑出-->
-    <style name="adialog_translate" parent="basedialog">
+    <style name="bottomDialog" parent="basedialog">
         <item name="android:windowEnterAnimation">@anim/adialog_translate_show</item>  <!--显示动画-->
         <item name="android:windowExitAnimation">@anim/adialog_translate_cancel</item> <!--消失动画-->
+    </style>
+
+    <!--activity进场出场动画-->
+    <style name="AnimationActivity" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+    <style name="line_gray">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/line_gray</item>
+    </style>
+
+    <style name="line_gray_h">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/line_gray</item>
+    </style>
+
+    <style name="listv_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:cacheColorHint">@color/transparent</item>
+        <item name="android:listSelector">@drawable/ripple_white_gray_bg</item>
+        <item name="android:divider">@color/line_gray</item>
+        <item name="android:transcriptMode">alwaysScroll</item>
+        <item name="android:dividerHeight">1dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:paddingLeft">1dp</item>
+        <item name="android:paddingRight">1dp</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="grid_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:cacheColorHint">@color/transparent</item>
+        <item name="android:horizontalSpacing">3dp</item>
+        <item name="android:listSelector">@color/transparent</item>
+        <item name="android:minHeight">70dp</item>
+        <item name="android:numColumns">5</item>
+        <item name="android:verticalSpacing">5dp</item>
     </style>
 
 
